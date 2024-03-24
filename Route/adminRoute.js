@@ -40,9 +40,6 @@ adminRouter.post("/admin-register", async (req, res) => {
     }
 });
 
-
-
-
 // login
 adminRouter.post("/admin-login", async (req, res) => {
     const { email, password } = req.body;

@@ -4,6 +4,7 @@ const cors = require("cors")
 const { userRouter } = require("./Route/userRoute")
 const { Connection } = require("./Config/db")
 const { geoRouter } = require("./Route/geoRoute")
+const { adminRouter } = require("./Route/adminRoute")
 
 const app = express()
 
@@ -14,6 +15,7 @@ app.use(express.json())
 
 app.use("/users", userRouter)
 app.use("/geo", geoRouter)
+app.use("/admin", adminRouter)
 
 app.listen(process.env.PORT, async () => {
     try {
